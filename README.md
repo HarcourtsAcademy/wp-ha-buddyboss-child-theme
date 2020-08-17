@@ -1,0 +1,1 @@
+# wp-ha-buddyboss-child-theme
