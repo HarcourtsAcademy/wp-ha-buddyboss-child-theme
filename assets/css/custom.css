@@ -13,3 +13,52 @@ https://www.w3schools.com/css/css_rwd_mediaqueries.asp
     text-decoration: none;
     color: grey;
 }
+
+div.bb-lms-footer {
+    padding: 0;
+    position: relative;
+    margin: 0;
+    /*@include transition(all linear .2s);*/
+    -webkit-transition: margin .2s;
+    transition: margin .2s;
+}
+div.bb-lms-footer .sfwd-course-position {
+    margin-right: auto;
+}
+div.bb-lms-footer h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+div.bb-lms-footer .bb-position {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 544px) {
+    div.bb-lms-footer .bb-position {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    div.bb-lms-footer .bb-position .sfwd-course-nav {
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width: 380px) {
+    #learndash-page-content div.bb-lms-footer .bb-position .sfwd-course-nav {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+}
