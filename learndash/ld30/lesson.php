@@ -320,7 +320,7 @@ if ( empty( $course ) ) {
                                 </div>
                             </div>
                         </div>
-                    </div> <!--/.learndash-course-footer-->
+                    </div> <!--/#learndash-course-footer-->
 
                 </div> <!--/.learndash-wrapper-->
 

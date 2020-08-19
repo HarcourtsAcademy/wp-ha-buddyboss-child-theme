@@ -284,6 +284,46 @@ $topics = learndash_get_topic_list( $lesson_id, $course_id );
 
                     </div><?php /* .learndash_content_wrap */ ?>
 
+                    <div id="learndash-course-footer" class="bb-lms-footer">
+                        <div class="sfwd-course-nav">
+                            <div class="bb-ld-status">
+                                <?php
+                                $status = ( learndash_is_item_complete() ? 'complete' : 'incomplete' );
+                                learndash_status_bubble( $status );
+                                ?>
+                            </div>
+                            <?php
+                            $expire_date_calc    = ld_course_access_expires_on( $course_id, $user_id );
+                            $courses_access_from = ld_course_access_from( $course_id, $user_id );
+                            $expire_access_days  = learndash_get_setting( $course_id, 'expire_access_days' );
+                            $date_format         = get_option( 'date_format' );
+                            $expire_date         = date_i18n( $date_format, $expire_date_calc );
+                            $current             = time();
+                            $expire_string       = ( $expire_date_calc > $current ) ? __( 'Expires at', 'buddyboss-theme' ) : __( 'Expired at', 'buddyboss-theme' );
+
+                            if ( $expire_date_calc > 0 && abs( intval( $expire_access_days ) )  > 0 && ( !empty( $user_id ) ) ) { ?>
+                                <div class="sfwd-course-expire">
+                                    <span data-balloon-pos="up" data-balloon="<?php echo $expire_string; ?>"><i class="bb-icons bb-icon-watch-alarm"></i><?php echo $expire_date; ?></span>
+                                </div>
+                            <?php } ?>
+                            <div class="learndash_next_prev_link">
+                                <?php
+                                if ( $pagination_urls['prev'] != '' ) {
+                                    echo $pagination_urls['prev'];
+                                } else {
+                                    echo '<span class="prev-link empty-post"></span>';
+                                }
+                                ?>
+                                <?php if ( (apply_filters( 'learndash_show_next_link', learndash_is_topic_complete( $user_id, $post->ID ),  $user_id, $post->ID ) && $pagination_urls['next'] != '') || ($course_settings['course_disable_lesson_progression'] === 'on' && $pagination_urls['next'] != '') ) {
+                                    echo $pagination_urls['next'];
+                                } else {
+                                    echo '<span class="next-link empty-post"></span>';
+                                }
+                                ?>
+                            </div>
+                        </div> <!--/.sfwd-course-nav-->
+                    </div> <!--/#learndash-course-footer-->
+
                 </div> <!--/.learndash-wrapper-->
 
             </div><?php /* .learndash-content-body */ ?>
