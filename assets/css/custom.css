@@ -78,13 +78,13 @@ div.bb-lms-footer .bb-position {
 }
 
 /** Stop the LD 'In progress' status badges looking like buttons */
-.learndash-wrapper .bb-single-course-sidebar .ld-status.ld-primary-background {
+#page .learndash-wrapper .bb-single-course-sidebar .ld-status {
     border-radius: 5px !important;
     border: 0;
     background-color: transparent !important;
 }
 
-.learndash-theme.single-sfwd-courses .learndash-wrapper .ld-course-status .ld-status {
+#page .learndash .learndash-wrapper .ld-course-status .ld-status {
     border-radius: 5px !important;
     background-color: #ebe9e6 !important;
     color: inherit !important;
