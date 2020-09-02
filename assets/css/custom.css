@@ -9,11 +9,13 @@ accidentally add desktop styles to the mobile layout.
 https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 --------------------------------------------------------------*/
 
+/** Completed LearnDash Lessons and Topics now appear grey in the TOC when completed. */
 .bb-lessons-list .bb-completed-item {
     text-decoration: none;
     color: grey;
 }
 
+/** Duplicate the LD course navigation styles in the footer. */
 div.bb-lms-footer {
     padding: 0;
     position: relative;
@@ -62,3 +64,31 @@ div.bb-lms-footer .bb-position {
         align-items: flex-start;
     }
 }
+
+/** Improve the appearance of the Open xAPI content button */
+.uo-tclr-open-content .uo-tclr-open-content-button {
+    border-radius: 50px;
+    border: 0;
+    background-color: #00ADEF !important;
+    color: #FFF;
+}
+
+.uo-tclr-open-content .uo-tclr-open-content-button .uo-tclr-open-content-button__text {
+    line-height: inherit;
+}
+
+/** Stop the LD 'In progress' status badges looking like buttons */
+.learndash-wrapper .bb-single-course-sidebar .ld-status.ld-primary-background {
+    border-radius: 5px !important;
+    border: 0;
+    background-color: transparent !important;
+}
+
+.learndash-theme.single-sfwd-courses .learndash-wrapper .ld-course-status .ld-status {
+    border-radius: 5px !important;
+    background-color: #ebe9e6 !important;
+    color: inherit !important;
+}
+
+/** Hide course progress badge in course page header and footer */
+#learndash-page-content .ld-status { display: none; }
