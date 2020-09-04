@@ -9,10 +9,15 @@ accidentally add desktop styles to the mobile layout.
 https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 --------------------------------------------------------------*/
 
-/** Completed LearnDash Lessons and Topics now appear grey in the TOC when completed. */
+/** Completed LearnDash Lessons and Topics are not crossed out in the TOC when completed. */
 .bb-lessons-list .bb-completed-item {
     text-decoration: none;
     color: grey;
+}
+
+.learndash .learndash-wrapper .learndash-complete .ld-item-list-item-preview .ld-item-title > span:first-child,
+.learndash-wrapper .ld-table-list .ld-table-list-items div.ld-table-list-item a.ld-table-list-item-preview.learndash-complete .ld-topic-title{
+    text-decoration: none;
 }
 
 /** Duplicate the LD course navigation styles in the footer. */
