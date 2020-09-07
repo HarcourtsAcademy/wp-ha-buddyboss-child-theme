@@ -21,6 +21,13 @@ https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 }
 
 /** Duplicate the LD course navigation styles in the footer. */
+.single #learndash-course-footer {
+    width: 100%;
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 div.bb-lms-footer {
     padding: 0;
     position: relative;
@@ -91,9 +98,16 @@ div.bb-lms-footer .bb-position {
 
 #page .learndash .learndash-wrapper .ld-course-status .ld-status {
     border-radius: 5px !important;
-    background-color: #ebe9e6 !important;
+    background-color: #EBE9E6 !important;
     color: inherit !important;
 }
 
 /** Hide course progress badge in course page header and footer */
 #learndash-page-content .ld-status { display: none; }
+
+/** Make LD Previous and Next buttons look clickable when it is active. */
+#page #learndash-page-content .sfwd-course-nav .learndash_next_prev_link a {
+    font-size: 0;
+    background-color: #00ADEF;
+    color: #fff;
+}
