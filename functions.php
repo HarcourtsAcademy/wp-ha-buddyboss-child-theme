@@ -52,12 +52,11 @@ function buddyboss_theme_child_scripts_styles()
   // Javascript
   wp_enqueue_script( 'buddyboss-child-js', get_stylesheet_directory_uri().'/assets/js/custom.js', '', '1.0.0' );
 
-  // Reload LearnDash Lesson and Topic pages on blur > focus to ensure that xAPI content is shown as complete.
-  global $template;
-  if (basename($template) === 'single-sfwd-lessons.php' ||
-      basename($template) === 'single-sfwd-topic.php') {
-      wp_enqueue_script('reload-on-refocus-js', get_stylesheet_directory_uri() . '/assets/js/reload-on-refocus.js', '', '1.0.0', true);
-  }
+  // Reload LearnDash Lesson and Topic pages on blur > focus to ensure that xAPI content is shown as complete.global $template;
+//  if (basename($template) === 'single-sfwd-lessons.php' ||
+//      basename($template) === 'single-sfwd-topic.php') {
+//      wp_enqueue_script('reload-on-refocus-js', get_stylesheet_directory_uri() . '/assets/js/reload-on-refocus.js', '', '1.0.0', true);
+//  }
 }
 add_action( 'wp_enqueue_scripts', 'buddyboss_theme_child_scripts_styles', 9999 );
 
