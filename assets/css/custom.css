@@ -16,7 +16,8 @@ https://www.w3schools.com/css/css_rwd_mediaqueries.asp
 }
 
 .learndash .learndash-wrapper .learndash-complete .ld-item-list-item-preview .ld-item-title > span:first-child,
-.learndash-wrapper .ld-table-list .ld-table-list-items div.ld-table-list-item a.ld-table-list-item-preview.learndash-complete .ld-topic-title{
+.learndash-wrapper .ld-table-list .ld-table-list-items div.ld-table-list-item a.ld-table-list-item-preview.learndash-complete .ld-topic-title,
+.learndash-wrapper .ld-table-list-item.learndash-complete .ld-item-title>span:first-child {
     text-decoration: none;
 }
 
