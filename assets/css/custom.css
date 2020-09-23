@@ -37,6 +37,9 @@ div.bb-lms-footer {
     -webkit-transition: margin .2s;
     transition: margin .2s;
 }
+div.bb-lms-header .sfwd-course-position {
+    margin-right: auto;
+}
 div.bb-lms-footer .sfwd-course-position {
     margin-right: auto;
 }
