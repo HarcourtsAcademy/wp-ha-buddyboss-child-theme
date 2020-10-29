@@ -115,3 +115,16 @@ div.bb-lms-footer .bb-position {
     background-color: #00ADEF;
     color: #fff;
 }
+
+/** Remove green background from WPForms completion message. */
+div.wpforms-confirmation-container-full {
+    color: inherit;
+    margin: 0;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+div.wpforms-confirmation-container-full p:last-of-type {
+    margin: inherit;
+}
