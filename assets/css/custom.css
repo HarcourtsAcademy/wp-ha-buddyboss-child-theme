@@ -116,6 +116,9 @@ div.bb-lms-footer .bb-position {
     color: #fff;
 }
 
+/** Hide the Course Back and Next navigation buttons from the top of every course page. */
+#learndash-page-content #learndash-course-header > .bb-position { display: none; }
+
 /** Remove green background from WPForms completion message. */
 div.wpforms-confirmation-container-full {
     color: inherit;
